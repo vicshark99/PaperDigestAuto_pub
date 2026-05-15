@@ -38,7 +38,7 @@ CATEGORIES = [
 class PaperCategorizer:
     """Categorize papers into research areas using LLM."""
 
-    DEFAULT_MODEL = "deepseek-chat"
+    DEFAULT_MODEL = "kimi-k2.6"
 
     def __init__(self, api_key: str, model: str = None):
         self.api_key = api_key
@@ -94,7 +94,7 @@ Respond with a JSON array of category names in the same order as the papers:
 
         try:
             # DeepSeek API endpoint
-            url = "https://api.deepseek.com/v1/chat/completions"
+            url = "https://api.moonshot.cn/v1/chat/completions"
             
             # Prepare request payload
             payload = {
