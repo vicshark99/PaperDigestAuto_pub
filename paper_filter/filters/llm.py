@@ -127,8 +127,7 @@ Be selective - only give high scores (>0.6) to papers that are genuinely relevan
                 "messages": [
                     {"role": "user", "content": prompt}
                 ],
-                "max_tokens": 2000,
-                "temperature": 0.0
+                "max_tokens": 2000
             }
             
             # Send request
