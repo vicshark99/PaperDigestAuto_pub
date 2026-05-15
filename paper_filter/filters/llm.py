@@ -35,7 +35,7 @@ class LLMFilter:
     """Second-pass LLM-based relevance scoring."""
 
     # Default model - can be overridden via config
-    DEFAULT_MODEL = "deepseek-chat"
+    DEFAULT_MODEL = "kimi-k2.6"
 
     def __init__(
         self,
