@@ -119,7 +119,7 @@ Be selective - only give high scores (>0.6) to papers that are genuinely relevan
 
         try:
             # DeepSeek API endpoint
-            url = "https://api.deepseek.com/v1/chat/completions"
+            url = "https://api.moonshot.cn/v1/chat/completions"
             
             # Prepare request payload
             payload = {
