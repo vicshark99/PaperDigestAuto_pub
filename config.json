@@ -34,7 +34,7 @@
     "INT8",
     "INT4",
     "FP4",
-    "booth"
+    "booth",
     "spatial architecture",
     "memory hierarchy",
     "register file",
