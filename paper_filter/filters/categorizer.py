@@ -103,8 +103,7 @@ Respond with a JSON array of category names in the same order as the papers:
                 "messages": [
                     {"role": "user", "content": prompt}
                 ],
-                "max_tokens": 2000,
-                "temperature": 0.0
+                "max_tokens": 2000
             }
             
             # Send request
