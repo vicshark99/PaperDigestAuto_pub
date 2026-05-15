@@ -56,11 +56,12 @@ class PaperCategorizer:
 
         # Group by category
         result = {cat: [] for cat in CATEGORIES}
+        result["Other"] = []
         for (paper, score, reason), category in zip(papers, paper_categories):
             if category in result:
                 result[category].append((paper, score, reason))
             else:
-                result["Other (Self-Driving Labs, Materials, etc.)"].append((paper, score, reason))
+                result["Other"].append((paper, score, reason))
 
         return result
 
