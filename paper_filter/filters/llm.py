@@ -115,7 +115,7 @@ Respond in JSON format:
     ]
 }}
 
-Be selective - only give high scores (>0.6) to papers that are genuinely relevant to the lab's research focus as described above."""
+Be selective - only give high scores (>0.6) to papers that are genuinely relevant to the lab's research focus as described above.Important: Return ONLY the raw JSON without any markdown formatting, explanations, or code blocks."""
 
         try:
             # DeepSeek API endpoint
