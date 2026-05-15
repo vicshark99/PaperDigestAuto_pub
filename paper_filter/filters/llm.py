@@ -162,8 +162,16 @@ Be selective - only give high scores (>0.6) to papers that are genuinely relevan
                         )
                 return results
 
+        
         except Exception as e:
             error_str = str(e)
+            # 打印详细的 API 错误响应
+            if hasattr(e, 'response') and e.response is not None:
+                try:
+                    print(f"API Error Details: {e.response.text[:500]}")
+                except:
+                    pass
+            
             # Check for credit balance error - this should stop the whole pipeline
             if "credit balance" in error_str.lower() or "insufficient balance" in error_str.lower():
                 raise InsufficientCreditsError("API credit balance is too low to continue scoring")
