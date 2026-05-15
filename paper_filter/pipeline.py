@@ -160,7 +160,7 @@ def run_pipeline(dry_run: bool = False, test_mode: bool = False):
         except InsufficientCreditsError:
             # If categorization fails, put all papers in "Other"
             print("ERROR: API credits exhausted during categorization")
-            categorized_papers = {"Other (Self-Driving Labs, Materials, etc.)": relevant_papers}
+            categorized_papers = {"Other": relevant_papers}
             credits_exhausted = True
     else:
         categorized_papers = {}
