@@ -92,7 +92,7 @@ class DingTalkPoster:
 
             # Additional chunks get posted as overflow messages later
             for i, chunk in enumerate(chunks[1:], start=2):
-                overflow_content = f"# think ## {category} (continued {i}/{len(chunks)})\n\n"
+                overflow_content = f"## {category} (continued {i}/{len(chunks)})\n\n"
                 overflow_content += "\n".join(chunk) + "\n"
                 overflow_messages.append({
                     "msgtype": "markdown",
@@ -143,7 +143,7 @@ class DingTalkPoster:
         - If more than max_authors, truncate with ellipsis but keep final author
         - Key authors are NEVER truncated - they're always shown even if in the
           middle of a long list
-          e.g., "A1, A2, ..., **KeyAuthor**, ..., LastAuthor"
+        e.g., "A1, A2, ..., **KeyAuthor**, ..., LastAuthor"
         """
         if not authors:
             return ""
